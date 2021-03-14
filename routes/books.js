@@ -25,7 +25,7 @@ router.post('/', async (req, res) => {
 // Get All Books In API
 router.get("/", (req, res) => {
     Book.find().then(books => res.send(books)).catch(error => {
-        res.send(500).send("Something Went Wrongs")
+        res.status(500).send("Something Went Wrongs")
     })
 })
 // Get The Book By Id
