@@ -18,7 +18,7 @@ router.post('/', async (req, res) => {
     book.save().then(book => {
         res.send(book);
     }).catch(error => {
-        res.send(500).send("Books Not Stored In Db")
+        res.status(500).send("Books Not Stored In Db")
     })
 })
 
